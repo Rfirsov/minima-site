@@ -1,0 +1,289 @@
+@import "reset.css";
+
+
+/*---- fonts------ */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,700i');
+
+@font-face {
+    font-family: 'Socialico';
+    src: url(../fonts/Socialico.ttf);
+}
+@font-face {
+    font-family: 'Satellite';
+    src: url(../fonts/Satellite.otf);
+}
+@font-face {
+    font-family: 'Flatform Light';
+    src: url(../fonts/Flatform-Light.otf);
+}
+
+
+/* site */
+
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: normal;
+	background-color: #fff; 
+}
+.wrapper {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+header {
+	display: flex;
+	height: 130px;
+}
+nav, .logo{
+	align-self: center;
+}
+nav li a {
+	cursor: pointer;
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+	color: #6e6e6e;
+	text-decoration: none;
+}
+
+nav li a:hover {
+	text-decoration: underline;
+}
+nav ul {
+	display: flex;
+}
+nav li {
+	margin-left: 48px;
+}
+nav li, .logo {
+	flex: 1 1 auto;
+}
+.logo {
+	font-family: "Flatform Light", sans-serif;
+	font-size: 40px;
+	color: #4d4d4d; 
+}
+
+.billboard {
+	background: url(../img/bg-image.jpg) no-repeat center center;
+	height: 652px;
+	text-align: center;
+}
+
+.billboard h1 {
+	position: relative;
+	top: 217px;
+	font-family: "Satellite", sans-serif;
+	font-size: 50px;
+	color: #4d4d4d;
+}
+
+.billboard p {
+	position: relative;
+	top: 240px;
+	font-family: "Open Sans", sans-serif;
+	font-size: 16px;
+	color: #4d4d4d;
+}
+.billboard button {
+	position: relative;
+	top: 290px;
+	width: 285px;
+	height: 50px;
+	font: 600 18px/18px "Open Sans";
+	text-transform: uppercase;
+	background: #4d4d4d;
+	color: #fff;
+	cursor: pointer;
+	border-style: none;
+	border-radius: 25px;
+}
+
+/* SERVICES */
+
+#services {
+	height: 423px;
+}
+
+.content-services {
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+	border-bottom: 1px solid #e7e7e7;
+}
+.stationery-item, .timer-item, .camera-item {
+	flex: 1 1 0;
+	margin: 100px 0;
+
+}
+
+.stationery-item h3, .timer-item h3, .camera-item h3 {
+	height: 100px;
+	text-transform: uppercase;
+	font: bold 22px/22px "Open Sans";
+	color: #4d4d4d;
+}
+
+.stationery-item p, .timer-item p, .camera-item p {
+	font: normal 14px/14px "Open Sans";
+	color: #7e7e7e;
+}
+
+/* OUR_STORY */
+
+.video {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	color: #4d4d4d;
+	height: 720px;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.video h2 {
+	align-self: flex-end;
+	font: bold 30px/30px "Open Sans";
+	text-transform: uppercase;
+}
+
+.video p {
+	align-self: center;
+	text-align: center;
+	font: normal 16px/16px "Open Sans";
+}
+.video img {
+	align-self: flex-start;
+}
+
+/* WORK */
+
+#work h1 {
+	padding-top: 15px;
+	font: 600 30px/30px "Open Sans";
+	text-align: center;
+	text-transform: uppercase;
+	color: #4d4d4d;
+}
+.brand-group {
+	margin: 0 -3px;
+	height: 522px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.brand-group .brand {
+	margin: 0 3px;
+	flex: 1 0 auto;
+	cursor: pointer;
+}
+
+.brand-group .brand img {
+	max-width: 100%;
+}
+
+
+/* JOURNAL */
+
+.subscribers {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 360px;
+	text-align: center;
+	background-color: #f5f5f5;
+	border-top: 1px solid #e7e7e7;
+	border-bottom: 1px solid #e7e7e7;
+}
+.subscribers h2 {
+	text-transform: uppercase;  
+	font: 600 30px/34px "Open Sans";
+	color: #4d4d4d;
+}
+.subscribers p {
+	padding-top: 25px;
+	padding-bottom: 50px;
+	font: normal 14px "Open Sans";
+	color: #3b3b3b;
+}
+.subscribers button {
+	width: 308px;
+	padding: 13px;
+	align-self: center;
+	font: 600 18px/20px "Open Sans";
+	text-transform: uppercase;
+	background: #f5f5f5;
+	color: #4d4d4d;
+	cursor: pointer;
+	border: 2px solid #4d4d4d;
+	border-radius: 30px;
+}
+.social {
+	height: 270px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.icon-fb, .icon-tw, 
+.icon-dribble, .icon-google {
+	margin: 30px;
+	padding: 18px;
+	flex-basis: 70px;
+	text-align: center;
+	font: normal 30px "Socialico";
+	border: 2px solid #4d4d4d;
+	cursor: pointer;
+}
+.icon-fb a, .icon-tw a, 
+.icon-dribble a, .icon-google a {
+	color: #4d4d4d;	
+}
+.icon-fb:hover{
+	background: #3b5998;
+}
+.icon-tw:hover{
+	background: #00aced;
+} 
+.icon-dribble:hover{
+	background: #ea4c89;
+}
+.icon-google:hover {
+	background: #dd4b39;
+}
+.icon-fb a:hover, .icon-tw a:hover, 
+.icon-dribble a:hover, .icon-google a:hover {
+	color: #fff;	
+}
+#contact {
+	height: 350px;
+	font: 600 18px/30px "Open Sans";
+	background: #3b3b3b;
+	color: #fff;
+
+}
+
+footer {
+	display: flex;
+	height: 150px;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.location, .support, .company, .info  {
+	padding-top: 100px;
+}
+
+.location address, .company li, 
+.support li, .info span {
+	font: normal 14px/28px "Open Sans";
+}
+.location h5, .company h5, 
+.support h5, .info h5 {
+	padding-bottom: 27px;
+}
+.company a, .support a {
+	color: #fff;
+}
