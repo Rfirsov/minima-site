@@ -21,24 +21,32 @@
 
 /* site */
 
-
+html, body {
+	width: 100%;
+	height: 100%;
+}
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: normal;
 	background-color: #fff; 
 }
 .wrapper {
-	width: 100%;
-	max-width: 1200px;
+	max-width: 100%;
+	width: 1200px;
 	margin: 0 auto;
 }
 
 header {
-	display: flex;
 	height: 130px;
+	display: flex;
+	align-items: center;
 }
-nav, .logo{
-	align-self: center;
+
+nav ul {
+	display: flex;
+}
+nav li:nth-child(2) {
+	width: 72px;
 }
 nav li a {
 	cursor: pointer;
@@ -51,48 +59,55 @@ nav li a {
 nav li a:hover {
 	text-decoration: underline;
 }
-nav ul {
-	display: flex;
-}
 nav li {
 	margin-left: 48px;
 }
-nav li, .logo {
-	flex: 1 1 auto;
+
+nav {
+	flex: 1 1 78%;
 }
 .logo {
 	font-family: "Flatform Light", sans-serif;
 	font-size: 40px;
-	color: #4d4d4d; 
+	color: #4d4d4d;
+	flex: 1 1 100%; 
 }
 
 .billboard {
-	background: url(../img/bg-image.jpg) no-repeat center center;
-	height: 652px;
+	background: url('../img/bg-image.jpg') no-repeat center center fixed;
+	background-size: cover;
+	/* width: 100%; */
+	padding: 8px 0;
 	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
-
+.billboard-content {
+	margin: 225px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 .billboard h1 {
-	position: relative;
-	top: 217px;
 	font-family: "Satellite", sans-serif;
 	font-size: 50px;
 	color: #4d4d4d;
+	flex: 1 1 100%;
 }
 
 .billboard p {
-	position: relative;
-	top: 240px;
+	margin-top: 30px;
 	font-family: "Open Sans", sans-serif;
 	font-size: 16px;
 	color: #4d4d4d;
+	flex: 1 1 100%;
 }
 .billboard button {
-	position: relative;
-	top: 290px;
-	width: 285px;
-	height: 50px;
-	font: 600 18px/18px "Open Sans";
+	margin-top: 42px;
+	width: 290px;
+	height: 48px;
+	font: 600 18px "Open Sans";
 	text-transform: uppercase;
 	background: #4d4d4d;
 	color: #fff;
@@ -100,21 +115,23 @@ nav li, .logo {
 	border-style: none;
 	border-radius: 25px;
 	outline: none;
+	flex: 1 1 100%;
 }
 .billboard button:hover {
 	background: rgb(110, 110, 110);
 }
 .billboard button:active {
-	box-shadow: inset 3px 4px 3px #505050;
+	box-shadow: inset -2px -3px 5px #505050;
 }
 
 /* SERVICES */
 
 #services {
-	height: 423px;
+	padding-top: 100px;
 }
 
 .content-services {
+	padding-bottom: 100px;
 	display: flex;
 	justify-content: space-between;
 	text-align: center;
@@ -122,51 +139,55 @@ nav li, .logo {
 }
 .stationery-item, .timer-item, .camera-item {
 	flex: 1 1 0;
-	margin: 100px 0;
 
 }
 
 .stationery-item h3, .timer-item h3, .camera-item h3 {
-	height: 100px;
+	margin-top: 35px;
 	text-transform: uppercase;
 	font: bold 22px/22px "Open Sans";
 	color: #4d4d4d;
 }
 
 .stationery-item p, .timer-item p, .camera-item p {
-	font: normal 14px/14px "Open Sans";
+	margin-top: 34px;
+	font: normal 14px/22px "Open Sans";
 	color: #7e7e7e;
 }
 
 /* OUR_STORY */
 
 .video {
+	margin: 80px 0 100px 0;
 	display: flex;
 	justify-content: center;
+	align-items: flex-start;
 	flex-wrap: wrap;
 	color: #4d4d4d;
-	height: 720px;
-	border-bottom: 1px solid #e7e7e7;
 }
 
 .video h2 {
-	align-self: flex-end;
+	text-align: center;
 	font: bold 30px/30px "Open Sans";
 	text-transform: uppercase;
 }
 
 .video p {
-	align-self: center;
+	margin-top: 20px;
 	text-align: center;
 	font: normal 16px/16px "Open Sans";
 }
-.video img {
-	align-self: flex-start;
+.video iframe {
+	margin-top: 80px;
+	width: 60%;
+	height: 60vh;
+	border-radius: 4px;
 }
 
 /* WORK */
 
 #work h1 {
+	border-top: 1px solid #e7e7e7;
 	padding-top: 15px;
 	font: 600 30px/30px "Open Sans";
 	text-align: center;
@@ -174,25 +195,22 @@ nav li, .logo {
 	color: #4d4d4d;
 }
 .brand-group {
-	margin: 0 -5px;
-	height: 522px;
+	margin: 100px 0;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
 }
 .brand-group .brand {
-	position: relative;
-	margin: 0 5px;
-	max-width: 262px;
-	height: 61%;
-	text-align: center;
+	max-width: 23%;
+	height: 320px;
 	background: #f7f7f7;
-	flex: 1 0;
+	flex: 1 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	cursor: pointer;
 }
-.brand-group .brand:first-child {
-	margin-left: 0;
-}
+
 .brand-group .brand:hover::after {
 	content: attr(data-title);
 	padding: 1em;
@@ -261,7 +279,7 @@ nav li, .logo {
 	background: rgb(245, 245, 245);
 }
 .social {
-	height: 270px;
+	margin: 70px 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -297,8 +315,9 @@ nav li, .logo {
 .icon-dribble a:hover, .icon-google a:hover {
 	color: #fff;	
 }
+
 #contact {
-	height: 350px;
+	padding: 100px 0;
 	font: 600 18px/30px "Open Sans";
 	background: #3b3b3b;
 	color: #fff;
@@ -307,23 +326,81 @@ nav li, .logo {
 
 footer {
 	display: flex;
-	height: 150px;
 	justify-content: space-between;
 	align-items: flex-start;
 }
 
-.location, .support, .company, .info  {
-	padding-top: 100px;
-}
-
 .location address, .company li, 
 .support li, .info span {
-	font: normal 14px/28px "Open Sans";
+	font: normal 14px/24px "Open Sans";
 }
 .location h5, .company h5, 
 .support h5, .info h5 {
-	padding-bottom: 27px;
+	padding-bottom: 25px;
 }
 .company a, .support a {
 	color: #fff;
+}
+
+
+
+@media (max-width: 800px){
+	header {
+		height: 100px;
+		flex-wrap: wrap;
+	}
+	.logo {
+		flex: 1 1 50%;
+	}
+	.billboard {
+		padding: 0;
+	}
+	.content-services {
+		flex-direction: column;
+	}
+	.brand-group {
+		margin: 60px 0;
+	}
+	.brand-group .brand {
+		width: 23%;
+		height: 220px;
+	}
+	#services {
+		padding-top: 40px;
+	}
+
+	.content-services {
+		flex-direction: column;
+		padding-bottom: 50px;
+	}
+	.content-services div {
+		margin-top: 12px;
+	}
+	.video {
+	margin: 50px 0 60px 0;
+	}
+	#contact {
+		padding: 40px 0;
+	}
+	footer {
+		padding-left: 200px;
+		flex-direction: column;
+	}
+	footer .company {
+		display: none;
+	}
+	footer .info {
+		display: none;
+	}
+	
+}
+
+@media (max-width: 520px){
+	.logo, .nav li {
+		flex-basis: auto;
+	}
+	nav li:first-child {
+		margin-left: 0;
+	}
+
 }
